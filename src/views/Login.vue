@@ -1,32 +1,21 @@
 <template>
   <div class="home">
-    <el-row
-      style="background:plum"
-    >
-      <el-col
-        :xs="24"
-        :sm="24"
-        :md="12"
-      >
-        <div
-          class="grid-content"
+    <b-container>
+      <b-row align-v="center">
+        <b-col
+          cols="12"
+          md="6"
         >
           <img
             src="../assets/login/login.svg"
             alt=""
             class="login"
           >
-        </div>
-      </el-col>
-      <el-col
-        :xs="24"
-        :sm="24"
-        :md="10"
-        :offset="2"
-        style="background:yellow;"
-        class="loginInput"
-      >
-        <div>
+        </b-col>
+        <b-col
+          cols="12"
+          md="6"
+        >
           <el-input
             placeholder="支持手机号/邮箱/用户名登录"
             v-model="username"
@@ -41,9 +30,12 @@
           <el-button type="primary">
             登录
           </el-button>
-        </div>
-      </el-col>
-    </el-row>
+          <a href="javascript:;">
+            忘记密码？点此找回
+          </a>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
@@ -64,14 +56,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.home{
-  background-color: orange;
-  .grid-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
    @media (max-width: 767px){
     .login{
           width: 300px;
@@ -84,23 +68,23 @@ export default {
           height: auto;
       }
     }
-      .el-input{
-      background-color: #EFF3F6;
-      height: 45px;
-      border-radius: 10px;
-      margin: 10px 0px;
-      width: 100%;
+    .el-input{
+    background-color: #EFF3F6;
+    height: 45px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    width: 100%;
+    outline: none;
+    border: none;
+      /deep/.el-input__inner{
+      background-color: transparent;
       outline: none;
       border: none;
-       /deep/.el-input__inner{
-        background-color: transparent;
-        outline: none;
-        border: none;
-        height: 100%;
-        width: calc(100% - 40px);
-          padding: 0px 15px;
-      }
+      height: 100%;
+      width: calc(100% - 40px);
+        padding: 0px 15px;
     }
+  }
      /deep/.el-button{
       width: 100%;
       height: 45px;
@@ -116,7 +100,8 @@ export default {
       margin: 10px 0px;
       padding: 0px 15px;
     }
-  }
-}
-
+    a{
+      text-decoration: none;
+      border-bottom: 1px solid #366AC9;
+    }
 </style>
