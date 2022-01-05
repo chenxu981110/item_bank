@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <el-row style="background:plum">
+    <el-row
+      style="background:plum"
+    >
       <el-col
         :xs="24"
         :sm="24"
@@ -17,15 +19,14 @@
         </div>
       </el-col>
       <el-col
-        :xs="20"
+        :xs="24"
         :sm="24"
         :md="10"
         :offset="2"
-        style="background:yellow"
+        style="background:yellow;"
+        class="loginInput"
       >
-        <div
-          class="grid-content"
-        >
+        <div>
           <el-input
             placeholder="支持手机号/邮箱/用户名登录"
             v-model="username"
