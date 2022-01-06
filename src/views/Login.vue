@@ -15,6 +15,7 @@
         <b-col
           cols="12"
           md="6"
+          style="padding:0px;"
         >
           <el-input
             placeholder="支持手机号/邮箱/用户名登录"
@@ -27,12 +28,26 @@
             v-model="password"
             show-password
           />
-          <el-button type="primary">
+          <el-button
+            type="primary"
+            id="login"
+          >
             登录
           </el-button>
           <a href="javascript:;">
             忘记密码？点此找回
           </a>
+          <div style="display: flex;flex-direction: row;align-items: center;width: 100%;margin: 10px auto;justify-content: center;">
+            <div style="width: calc(( 80% - 20px )/2);height: 1px;background-color: #EFF3F6;" />
+            <span style="font-size: 15px;font-weight: 600;">或</span>
+            <div style="width: calc(( 80% - 20px )/2);height: 1px;background-color: #EFF3F6;" />
+          </div>
+          <el-button
+            type="warning"
+            id="registered"
+          >
+            注册
+          </el-button>
         </b-col>
       </b-row>
     </b-container>
@@ -72,36 +87,49 @@ export default {
     background-color: #EFF3F6;
     height: 45px;
     border-radius: 10px;
-    margin: 10px 0px;
-    width: 100%;
+    margin: 20px auto;
+    width: 80%;
     outline: none;
     border: none;
+    display: block;
       /deep/.el-input__inner{
       background-color: transparent;
       outline: none;
       border: none;
       height: 100%;
       width: calc(100% - 40px);
-        padding: 0px 15px;
+      padding: 0px 15px;
     }
   }
      /deep/.el-button{
-      width: 100%;
+      width: 80%;
       height: 45px;
       outline: none;
       border: none;
       border-radius: 10px;
-      color: #fff;
       font-weight: 600;
       font-size: 15px;
       font-family: '黑体';
       letter-spacing: 3px;
-      background-color: #366AC9;
-      margin: 10px 0px;
+      margin: 10px auto;
       padding: 0px 15px;
+      display: block;
     }
     a{
-      text-decoration: none;
-      border-bottom: 1px solid #366AC9;
+      text-decoration: underline;
+      color: #366AC9;
+      width: 80%;
+      margin: 15px auto;
+      display: block;
+      text-align: right;
+      font-size: 14px;
+    }
+    #registered{
+    background-color: #FF6A4F27;
+    color: #FF6A4F;
+    }
+    #login{
+      color: #fff;
+      background-color: #366AC9;
     }
 </style>
