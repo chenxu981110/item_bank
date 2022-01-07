@@ -7,7 +7,7 @@
           md="6"
         >
           <img
-            src="../assets/login/login.svg"
+            src="@/assets/login/login.svg"
             alt=""
             class="login"
           >

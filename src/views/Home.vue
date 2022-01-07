@@ -36,87 +36,93 @@
           md="4"
           style="padding:0px"
         >
-          <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
-            <a
-              href="javascript:;"
-              style="width: 80%;display: inline-block;"
-            >
-              <div style="width: 100%;height: 150px;background: linear-gradient(to right bottom,#0139BA,rgb(133, 178, 223));border-radius: 15px;position: relative;">
-                <div style="padding: 30px;display: flex;flex-direction: column;align-items: flex-start;">
-                  <span
-                    style="display: inline-block;color: #fff;font-size: 20px;
+          <router-link to="/">
+            <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
+              <a
+                href="javascript:;"
+                style="width: 80%;display: inline-block;"
+              >
+                <div style="width: 100%;height: 150px;background: linear-gradient(to right bottom,#0139BA,rgb(133, 178, 223));border-radius: 15px;position: relative;">
+                  <div style="padding: 30px;display: flex;flex-direction: column;align-items: flex-start;">
+                    <span
+                      style="display: inline-block;color: #fff;font-size: 20px;
                                     letter-spacing:3px;font-family: '黑体';"
-                  >判断题</span>
-                  <span
-                    style="color: #fff;opacity: 0.6;font-size: 13px;letter-spacing: 2px;"
-                  >{{ judge_number }}题</span>
+                    >判断题</span>
+                    <span
+                      style="color: #fff;opacity: 0.6;font-size: 13px;letter-spacing: 2px;"
+                    >{{ judge_number }}题</span>
+                  </div>
+                  <div style="width: calc(80% - 69px);background:#fff ;height: 75px;position: absolute;bottom: 0px;right: 10px;z-index: 9999;border-top-left-radius: 15px;border-top-right-radius: 15px;opacity: 0.3;" />
+                  <div style="width: calc(80% - 89px);background:#fff ;height: 110px;position: absolute;bottom: 0px;right: 0px;z-index: 9999;border-top-left-radius: 15px;opacity: 0.6;border-bottom-right-radius: 15px;" />
+                  <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right: 15px;bottom: 72px;width: calc(80% - 119px);z-index: 99999;" />
+                  <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right:95px;bottom: 52px;width: calc(80% - 199px);z-index: 99999;" />
+                  <i
+                    class="iconfont icon-icon-"
+                    style="position: absolute;top: 78px;right: 15px;color: #fff;z-index: 99999;font-size: 50px;"
+                  />
                 </div>
-                <div style="width: calc(80% - 69px);background:#fff ;height: 75px;position: absolute;bottom: 0px;right: 10px;z-index: 9999;border-top-left-radius: 15px;border-top-right-radius: 15px;opacity: 0.3;" />
-                <div style="width: calc(80% - 89px);background:#fff ;height: 110px;position: absolute;bottom: 0px;right: 0px;z-index: 9999;border-top-left-radius: 15px;opacity: 0.6;border-bottom-right-radius: 15px;" />
-                <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right: 15px;bottom: 72px;width: calc(80% - 119px);z-index: 99999;" />
-                <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right:95px;bottom: 52px;width: calc(80% - 199px);z-index: 99999;" />
-                <i
-                  class="iconfont icon-icon-"
-                  style="position: absolute;top: 78px;right: 15px;color: #fff;z-index: 99999;font-size: 50px;"
-                />
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
+          </router-link>
         </b-col>
         <b-col
           sm="12"
           md="4"
           style="padding:0px"
         >
-          <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
-            <a
-              href="javascript:;"
-              style="width: 80%;display: inline-block;"
-            >
-              <div style="width: 100%;height: 150px;background: linear-gradient(to right bottom,#F3B24C,#FFD455);border-radius: 15px;position: relative;">
-                <div style="padding: 30px;display: flex;flex-direction: column;align-items: flex-start;">
-                  <span
-                    style="display: inline-block;color: #fff;font-size: 20px;
+          <router-link to="/">
+            <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
+              <a
+                href="javascript:;"
+                style="width: 80%;display: inline-block;"
+              >
+                <div style="width: 100%;height: 150px;background: linear-gradient(to right bottom,#F3B24C,#FFD455);border-radius: 15px;position: relative;">
+                  <div style="padding: 30px;display: flex;flex-direction: column;align-items: flex-start;">
+                    <span
+                      style="display: inline-block;color: #fff;font-size: 20px;
                                     letter-spacing:3px;font-family: '黑体';"
-                  >选择题</span>
-                  <span style="color: #fff;opacity: 0.95;font-size: 13px;letter-spacing: 2px;">{{ choose_number }}题</span>
+                    >选择题</span>
+                    <span style="color: #fff;opacity: 0.95;font-size: 13px;letter-spacing: 2px;">{{ choose_number }}题</span>
+                  </div>
+                  <div style="position: absolute;right: 0px;bottom: 0px;width: calc(80% - 69px);height: 110px;z-index: 99999;display: flex;flex-direction: row;justify-content: space-around;align-items: flex-end;padding: 0px 10px;">
+                    <div style="background: #FFEEC7;height: 50px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB53A;"><span>A</span></div>
+                    <div style="background: #FFEEC7;height: 50px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB53A;"><span>B</span></div>
+                    <div style="background: #FFFAEE;height: 80px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB742;"><span>C</span></div>
+                    <div style="background: #FFE8A2;height: 50px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB53A;"><span>D</span></div>
+                  </div>
                 </div>
-                <div style="position: absolute;right: 0px;bottom: 0px;width: calc(80% - 69px);height: 110px;z-index: 99999;display: flex;flex-direction: row;justify-content: space-around;align-items: flex-end;padding: 0px 10px;">
-                  <div style="background: #FFEEC7;height: 50px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB53A;"><span>A</span></div>
-                  <div style="background: #FFEEC7;height: 50px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB53A;"><span>B</span></div>
-                  <div style="background: #FFFAEE;height: 80px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB742;"><span>C</span></div>
-                  <div style="background: #FFE8A2;height: 50px;width: calc((100% - 35px)/4);text-align: center;padding-top: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;font-weight: 600;color: #FFB53A;"><span>D</span></div>
-                </div>
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
+          </router-link>
         </b-col>
         <b-col
           sm="12"
           md="4"
           style="padding:0px"
         >
-          <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
-            <a
-              href="javascript:;"
-              style="width: 80%;display: inline-block;"
-            >
-              <div style="width: 100%;height: 150px;background: linear-gradient(to right bottom,#FF5146,#FF8358);border-radius: 15px;position: relative;">
-                <div style="padding: 30px;display: flex;flex-direction: column;align-items: flex-start;">
-                  <span
-                    style="display: inline-block;color: #fff;font-size: 20px;
+          <router-link to="/">
+            <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
+              <a
+                href="javascript:;"
+                style="width: 80%;display: inline-block;"
+              >
+                <div style="width: 100%;height: 150px;background: linear-gradient(to right bottom,#FF5146,#FF8358);border-radius: 15px;position: relative;">
+                  <div style="padding: 30px;display: flex;flex-direction: column;align-items: flex-start;">
+                    <span
+                      style="display: inline-block;color: #fff;font-size: 20px;
                                     letter-spacing:3px;font-family: '黑体';"
-                  >作答题</span>
-                  <span style="color: #fff;opacity: 0.95;font-size: 13px;letter-spacing: 2px;">{{ free_response }}题</span>
+                    >作答题</span>
+                    <span style="color: #fff;opacity: 0.95;font-size: 13px;letter-spacing: 2px;">{{ free_response }}题</span>
+                  </div>
+                  <div style="width: calc(80% - 69px);background:#FF8F74 ;height: 75px;position: absolute;bottom: 0px;right: 10px;z-index: 9999;border-top-left-radius: 15px;border-top-right-radius: 15px;" />
+                  <div style="width: calc(80% - 89px);background:#FFC5B4 ;height: 110px;position: absolute;bottom: 0px;right: 0px;z-index: 9999;border-top-left-radius: 15px;border-bottom-right-radius: 15px;" />
+                  <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right: 15px;bottom: 72px;width: calc(80% - 119px);z-index: 99999;" />
+                  <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right:35px;bottom: 52px;width: calc(80% - 139px);z-index: 99999;" />
+                  <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right: 75px;bottom: 32px;width: calc(80% - 179px);z-index: 99999;" />
                 </div>
-                <div style="width: calc(80% - 69px);background:#FF8F74 ;height: 75px;position: absolute;bottom: 0px;right: 10px;z-index: 9999;border-top-left-radius: 15px;border-top-right-radius: 15px;" />
-                <div style="width: calc(80% - 89px);background:#FFC5B4 ;height: 110px;position: absolute;bottom: 0px;right: 0px;z-index: 9999;border-top-left-radius: 15px;border-bottom-right-radius: 15px;" />
-                <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right: 15px;bottom: 72px;width: calc(80% - 119px);z-index: 99999;" />
-                <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right:35px;bottom: 52px;width: calc(80% - 139px);z-index: 99999;" />
-                <div style="background: #fff;height: 8px;border-radius: 10px;position: absolute;right: 75px;bottom: 32px;width: calc(80% - 179px);z-index: 99999;" />
-              </div>
-            </a>
-          </div>
+              </a>
+            </div>
+          </router-link>
         </b-col>
       </b-row>
       <!--footer-->
