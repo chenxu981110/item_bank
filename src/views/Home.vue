@@ -21,12 +21,12 @@
           cols="5"
           style="text-align:right"
         >
-          <a href="javascript:;">
+          <router-link to="/Profile">
             <img
               src="../assets/home/头像.svg"
               alt="头像"
             >
-          </a>
+          </router-link>
         </b-col>
       </b-row>
       <!--content-->
