@@ -1,6 +1,7 @@
 import '@babel/polyfill'
 import 'mutationobserver-shim'
 import Vue from 'vue'
+import axios from 'axios'
 import './plugins/bootstrap-vue'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
@@ -12,6 +13,7 @@ import './assets/font/iconfont.css'
 import './assets/font/iconfont.woff2'
 import './assets/font/iconfont.ttf'
 Vue.config.productionTip = false
+Vue.prototype.$axios = axios
 
 new Vue({
   router,

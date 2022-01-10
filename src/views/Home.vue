@@ -150,45 +150,56 @@
           alt="压缩包"
         ></a>
         <a href="javascript:;"><i class="iconfont icon-daochu1024-29" /></a> -->
-        <form
-          method="POST"
-          enctype="multipart/form-data"
+
+        <a
+          class="icoBg"
+          href="javascript:;"
         >
-          <a
-            class="ico1"
-            href="javascript:;"
+          <input
+            type="file"
+            multiple
+            style=" position: absolute; right: 0px; top: 0px; opacity: 0; z-index: 99; width: 45px; height: 45px"
+            @change="updata"
           >
-            <img
-              src="../assets/home/latex.svg"
-              alt="latex"
-            >
-          </a>
-        </form>
-        <form
-          method="POST"
-          enctype="multipart/form-data"
-        >
-          <a
-            class="ico2"
-            href="javascript:;"
+          <img
+            class="img1"
+            src="../assets/home/latex.svg"
+            alt="latex"
           >
-            <img
-              src="../assets/home/压缩包.svg"
-              alt="压缩包"
-            >
-          </a>
-        </form>
-        <form
-          method="POST"
-          enctype="multipart/form-data"
+        </a>
+
+        <a
+          class="icoBg"
+          href="javascript:;"
         >
-          <a
-            class="ico3"
-            href="javascript:;"
-          ><i class="iconfont icon-daochu1024-29" /></a>
-        </form>
+          <input
+            type="file"
+            multiple
+            style=" position: absolute; right: 0px; top: 0px; opacity: 0; z-index: 99; width: 45px; height: 45px"
+            @change="updata"
+          >
+          <img
+            class="img2"
+            src="../assets/home/压缩包.svg"
+            alt="压缩包"
+          >
+        </a>
+
+        <a
+          class="icoBg"
+          href="javascript:;"
+        >
+          <i class="iconfont icon-daochu1024-29 icoAdd" />
+        </a>
       </b-row>
     </b-container>
+    <span class="fileinput-button ">
+      <i
+        class="fa fa-folder-open-o"
+        aria-hidden="true"
+      />
+
+    </span>
   </div>
 </template>
 
@@ -199,7 +210,10 @@ export default {
     return {
       judge_number: '3',
       choose_number: '5',
-      free_response: '260'
+      free_response: '260',
+      dialogImageUrl: '',
+      dialogVisible: false,
+      disabled: false
     }
   },
   mounted () {
@@ -210,6 +224,19 @@ export default {
     toTest (type) {
       console.log('点击了')
       this.$store.commit('pushTitType', type)
+    },
+    updata (e) {
+      const file = e.target.files[0]
+      const param = new FormData() // 创建form对象
+      param.append('file', file)// 通过append向form对象添加数据
+      console.log(param.get('file')) // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+      const config = {
+        headers: { 'Content-Type': 'multipart/form-data' }
+      } // 添加请求头
+      this.$axios.post('http://127.0.0.1:8081/upload', param, config)
+        .then(response => {
+          console.log(response.data)
+        })
     }
   }
 }
@@ -258,8 +285,8 @@ export default {
   flex-direction: row;
   align-items: center;
 }
-#footer{
 
+#footer{
  a{
     margin-right: 10px;
     background-color: #0139BA27;
@@ -297,4 +324,16 @@ export default {
         }
     }
 }
+.fileinput-button {
+ position: relative;
+ display: inline-block;
+ overflow: hidden;
+}
+.fileinput-button input {
+ position: absolute;
+ right: 0px;
+ top: 0px;
+ opacity: 0;
+}
+
 </style>

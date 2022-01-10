@@ -43,7 +43,7 @@
             >
               <i
                 class="iconfont "
-                :class="[isTrue == index ? activeClass : errorClass]"
+                :class="isTrue == index ? 'icon_yanjing' : 'icon_yanjing_bi'"
                 style="font-size: 20px;"
               />
             </div>
@@ -67,9 +67,10 @@ export default {
 
   data () {
     return {
-      isTrue: -1,
-      activeClass: 'icon_yanjing',
-      errorClass: 'icon_yanjing_bi',
+      isTrue: true,
+      number: '1',
+      /* activeClass: 'icon_yanjing',
+      errorClass: 'icon_yanjing_bi', */
       items: [
         {
           placeholder: '旧密码'
@@ -90,7 +91,6 @@ export default {
 
   methods: {
     showPassword (i) {
-      console.log('i', i)
       this.isTrue = i
     }
   }
