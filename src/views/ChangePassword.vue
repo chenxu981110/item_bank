@@ -34,16 +34,16 @@
           >
             <input
               class="inputs"
-              type="password"
+              :type="[item.classShow ? activeType : errorType]"
               :placeholder="item.placeholder"
             >
             <div
-              @click="showPassword(index)"
+              @click="showPassword(item)"
               style="width: 30px;height: 30px;border-radius: 50%;text-align: center;background-color: #E2E7F7;line-height:30px;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1),-2px -2px 2px rgba(255, 255, 255, 0.2);"
             >
               <i
-                class="iconfont "
-                :class="isTrue == index ? 'icon_yanjing' : 'icon_yanjing_bi'"
+                class="iconfont"
+                :class="[item.classShow ? activeClass : errorClass]"
                 style="font-size: 20px;"
               />
             </div>
@@ -51,7 +51,7 @@
           <div style="text-align: right;">
             <button
               type="submit"
-              style="background-color: #3892DF;color: #fff;padding: 5px 10px;letter-spacing: 1px; font-size: 14px;border: none; outline: none;margin: 10px 0px;border-radius: 10px;"
+              id="submit"
             >
               保存更改
             </button>
@@ -67,19 +67,22 @@ export default {
 
   data () {
     return {
-      isTrue: true,
-      number: '1',
-      /* activeClass: 'icon_yanjing',
-      errorClass: 'icon_yanjing_bi', */
+      activeClass: 'icon_yanjing',
+      errorClass: 'icon_yanjing_bi',
+      activeType: 'number',
+      errorType: 'password',
       items: [
         {
-          placeholder: '旧密码'
+          placeholder: '旧密码',
+          classShow: false
         },
         {
-          placeholder: '新密码'
+          placeholder: '新密码',
+          classShow: false
         },
         {
-          placeholder: '新密码确认'
+          placeholder: '新密码确认',
+          classShow: false
         }
       ]
     }
@@ -90,8 +93,8 @@ export default {
   },
 
   methods: {
-    showPassword (i) {
-      this.isTrue = i
+    showPassword (item) {
+      item.classShow = !item.classShow
     }
   }
 }
@@ -106,5 +109,16 @@ export default {
   background-color: transparent;
   outline: none;
   border: none;
+}
+#submit{
+  background-color: #3892DF;
+  color: #fff;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  margin: 10px 0px;
+  border-radius: 10px;
 }
 </style>
