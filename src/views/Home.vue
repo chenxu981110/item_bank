@@ -139,18 +139,6 @@
         id="footer"
         align-h="end"
       >
-        <!-- <a href="javascript:;"><img
-          src="../assets/home/latex.svg"
-          alt="latex"
-        ></a>
-        <a
-          href="javascript:;"
-        ><img
-          src="../assets/home/压缩包.svg"
-          alt="压缩包"
-        ></a>
-        <a href="javascript:;"><i class="iconfont icon-daochu1024-29" /></a> -->
-
         <a
           class="icoBg"
           href="javascript:;"
