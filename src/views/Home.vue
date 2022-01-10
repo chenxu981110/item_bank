@@ -207,7 +207,6 @@ export default {
   mounted () {
 
   },
-
   methods: {
     toTest (type) {
       console.log('点击了')
@@ -323,5 +322,4 @@ export default {
  top: 0px;
  opacity: 0;
 }
-
 </style>
