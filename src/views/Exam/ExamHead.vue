@@ -3,7 +3,7 @@
     <!-- 头部图标 -->
     <div class="headFlex">
       <div>图标</div>
-      <div>{{ headTxt[0] }}</div>
+      <div>{{ headTxt }}</div>
       <div>图标</div>
     </div>
 
@@ -135,16 +135,19 @@
 export default {
   data () {
     return {
-      headTxt: {
-        0: '判断题',
-        1: '选择题',
-        2: '作答题',
-        3: '组卷',
-        4: '我的收藏',
-        5: '未读消息列表',
-        6: '添加试题'
-      },
-      imput: ''
+      headTxt: '',
+      input: ''
+    }
+  },
+  created () {
+
+  },
+  methods: {
+
+  },
+  watch: {
+    '$store.state.titType' () {
+      this.headTxt = this.$store.state.titType
     }
   }
 }

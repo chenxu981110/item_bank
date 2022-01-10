@@ -28,12 +28,14 @@
             v-model="password"
             show-password
           />
-          <el-button
-            type="primary"
-            id="login"
-          >
-            登录
-          </el-button>
+          <router-link to="/Home">
+            <el-button
+              type="primary"
+              id="login"
+            >
+              登录
+            </el-button>
+          </router-link>
           <a href="javascript:;">
             忘记密码？点此找回
           </a>

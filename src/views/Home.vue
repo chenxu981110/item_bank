@@ -36,7 +36,10 @@
           md="4"
           style="padding:0px"
         >
-          <router-link to="/">
+          <router-link
+            to="/Exam"
+            @click.native="toTest('判断题')"
+          >
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
               <a
                 href="javascript:;"
@@ -70,7 +73,10 @@
           md="4"
           style="padding:0px"
         >
-          <router-link to="/">
+          <router-link
+            to="/Exam"
+            @click.native="toTest('选择题')"
+          >
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
               <a
                 href="javascript:;"
@@ -100,7 +106,10 @@
           md="4"
           style="padding:0px"
         >
-          <router-link to="/">
+          <router-link
+            @click.native="toTest('作答题')"
+            to="/Exam"
+          >
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
               <a
                 href="javascript:;"
@@ -130,7 +139,7 @@
         id="footer"
         align-h="end"
       >
-        <a href="javascript:;"><img
+        <!-- <a href="javascript:;"><img
           src="../assets/home/latex.svg"
           alt="latex"
         ></a>
@@ -140,7 +149,44 @@
           src="../assets/home/压缩包.svg"
           alt="压缩包"
         ></a>
-        <a href="javascript:;"><i class="iconfont icon-daochu1024-29" /></a>
+        <a href="javascript:;"><i class="iconfont icon-daochu1024-29" /></a> -->
+        <form
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <a
+            class="ico1"
+            href="javascript:;"
+          >
+            <img
+              src="../assets/home/latex.svg"
+              alt="latex"
+            >
+          </a>
+        </form>
+        <form
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <a
+            class="ico2"
+            href="javascript:;"
+          >
+            <img
+              src="../assets/home/压缩包.svg"
+              alt="压缩包"
+            >
+          </a>
+        </form>
+        <form
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <a
+            class="ico3"
+            href="javascript:;"
+          ><i class="iconfont icon-daochu1024-29" /></a>
+        </form>
       </b-row>
     </b-container>
   </div>
@@ -149,7 +195,6 @@
 <script>
 export default {
   name: 'Home',
-
   data () {
     return {
       judge_number: '3',
@@ -157,13 +202,15 @@ export default {
       free_response: '260'
     }
   },
-
   mounted () {
 
   },
 
   methods: {
-
+    toTest (type) {
+      console.log('点击了')
+      this.$store.commit('pushTitType', type)
+    }
   }
 }
 </script>
@@ -249,6 +296,5 @@ export default {
           transform: translate(-50%,-50%);
         }
     }
-
 }
 </style>

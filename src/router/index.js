@@ -28,6 +28,11 @@ const routes = [
     path: '/ExamHead',
     name: 'ExamHead',
     component: ExamHead
+  },
+  {
+    path: '/Profile',
+    name: 'Profile',
+    component: Profile
   }
 ]
 
