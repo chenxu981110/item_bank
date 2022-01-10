@@ -4,6 +4,7 @@ import Login from '../views/Login.vue'
 import Exam from '../views/Exam/Exam.vue'
 import ExamHead from '../views/Exam/ExamHead.vue'
 import Home from '../views/Home.vue'
+import Profile from '../views/Profile.vue'
 
 Vue.use(VueRouter)
 
