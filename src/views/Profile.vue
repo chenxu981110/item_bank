@@ -190,7 +190,7 @@ export default {
           background: '#C83D7627',
           color: '#C83D76',
           fontSize: 23,
-          href: 'javascript:;'
+          href: '/ChangePassword'
         },
         {
           iconClass: 'icon-biaoqian',

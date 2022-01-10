@@ -5,6 +5,7 @@ import Exam from '../views/Exam/Exam.vue'
 import ExamHead from '../views/Exam/ExamHead.vue'
 import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue'
+import ChangePassword from '../views/ChangePassword.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/Profile',
     name: 'Profile',
     component: Profile
+  },
+  {
+    path: '/ChangePassword',
+    name: 'ChangePassword',
+    component: ChangePassword
   }
 ]
 

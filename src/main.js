@@ -8,7 +8,9 @@ import router from './router'
 import store from './store'
 import './plugins/element.js'
 import './assets/css/all.css'
-
+import './assets/font/iconfont.css'
+import './assets/font/iconfont.woff2'
+import './assets/font/iconfont.ttf'
 Vue.config.productionTip = false
 
 new Vue({
