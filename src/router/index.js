@@ -7,6 +7,7 @@ import Profile from '../views/Profile.vue'
 import ChangePassword from '../views/ChangePassword.vue'
 import Collections from '../views/Collections.vue'
 import Tags from '../views/Tags.vue'
+import Register from '../views/Register.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/Register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/Exam',

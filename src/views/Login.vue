@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="Login">
     <b-container>
       <b-row align-v="center">
         <b-col
@@ -9,7 +9,7 @@
           <img
             src="@/assets/login/login.svg"
             alt=""
-            class="login"
+            id="loginImg"
           >
         </b-col>
         <b-col
@@ -45,13 +45,13 @@
             <span style="font-size: 15px;font-weight: 600;">或</span>
             <div style="width: calc(( 80% - 20px )/2);height: 1px;background-color: #EFF3F6;" />
           </div>
-          <el-button
-            type="warning"
+          <router-link
+            to="/Register"
             id="registered"
             class="btnRegistered"
           >
             注册
-          </el-button>
+          </router-link>
         </b-col>
       </b-row>
     </b-container>
@@ -76,13 +76,13 @@ export default {
 
 <style lang="less" scoped>
    @media (max-width: 767px){
-    .login{
+    #loginImg{
           width: 300px;
           height: 300px;
         }
    }
    @media (min-width: 767px){
-      .login {
+      #loginImg {
           width: 80%;
           height: auto;
       }
@@ -130,6 +130,15 @@ export default {
     #registered{
     background-color: #FF6A4F27;
     color: #FF6A4F;
+    height: 45px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: '黑体';
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 45px;
     }
     #login{
       color: #fff;
