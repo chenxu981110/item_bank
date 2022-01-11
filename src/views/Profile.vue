@@ -199,7 +199,7 @@ export default {
           background: '#FFD45527',
           color: '#FFD455',
           fontSize: 20,
-          href: 'javascript:;'
+          href: '/Tags'
         }
       ],
       inputs: [

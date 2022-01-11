@@ -13,7 +13,9 @@
         >
           <div class="flex_module">
             <a href="javascript:;"><i class="iconfont icon-zujuan-tianchong" /></a>
-            <a href="javascript:;"><i class="iconfont icon-collection" /></a>
+            <router-link to="/Collections">
+              <i class="iconfont icon-collection" />
+            </router-link>
             <a href="javascript:;"><i class="iconfont icon-xiaoxi" /></a>
           </div>
         </b-col>
@@ -237,6 +239,7 @@ export default {
     border-radius: 50%;
     text-align: center;
     line-height: 45px;
+    text-decoration: none;
   }
   a:first-child{
       background-color: #F05F4027;

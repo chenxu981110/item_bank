@@ -5,6 +5,8 @@ import Exam from '../views/Exam/Exam.vue'
 import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue'
 import ChangePassword from '../views/ChangePassword.vue'
+import Collections from '../views/Collections.vue'
+import Tags from '../views/Tags.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,16 @@ const routes = [
     path: '/ChangePassword',
     name: 'ChangePassword',
     component: ChangePassword
+  },
+  {
+    path: '/Collections',
+    name: 'Collections',
+    component: Collections
+  },
+  {
+    path: '/Tags',
+    name: 'Tags',
+    component: Tags
   }
 ]
 
