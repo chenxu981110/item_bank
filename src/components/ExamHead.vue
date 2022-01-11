@@ -43,11 +43,11 @@
               预习/作业<i class="el-icon-arrow-down el-icon--right" />
             </el-button>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item>双皮奶</el-dropdown-item>
-              <el-dropdown-item>蚵仔煎</el-dropdown-item>
+              <el-dropdown-item>1</el-dropdown-item>
+              <el-dropdown-item>2</el-dropdown-item>
+              <el-dropdown-item>3</el-dropdown-item>
+              <el-dropdown-item>4</el-dropdown-item>
+              <el-dropdown-item>5</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </el-col>
@@ -64,11 +64,11 @@
               章节<i class="el-icon-arrow-down el-icon--right" />
             </el-button>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item>双皮奶</el-dropdown-item>
-              <el-dropdown-item>蚵仔煎</el-dropdown-item>
+              <el-dropdown-item>1</el-dropdown-item>
+              <el-dropdown-item>2</el-dropdown-item>
+              <el-dropdown-item>3</el-dropdown-item>
+              <el-dropdown-item>4</el-dropdown-item>
+              <el-dropdown-item>5</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </el-col>
@@ -85,11 +85,11 @@
               难度等级<i class="el-icon-arrow-down el-icon--right" />
             </el-button>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item>双皮奶</el-dropdown-item>
-              <el-dropdown-item>蚵仔煎</el-dropdown-item>
+              <el-dropdown-item>1</el-dropdown-item>
+              <el-dropdown-item>2</el-dropdown-item>
+              <el-dropdown-item>3</el-dropdown-item>
+              <el-dropdown-item>4</el-dropdown-item>
+              <el-dropdown-item>5</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </el-col>
@@ -106,11 +106,11 @@
               是否收藏<i class="el-icon-arrow-down el-icon--right" />
             </el-button>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item>双皮奶</el-dropdown-item>
-              <el-dropdown-item>蚵仔煎</el-dropdown-item>
+              <el-dropdown-item>1</el-dropdown-item>
+              <el-dropdown-item>2</el-dropdown-item>
+              <el-dropdown-item>3</el-dropdown-item>
+              <el-dropdown-item>4</el-dropdown-item>
+              <el-dropdown-item>5</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
         </el-col>

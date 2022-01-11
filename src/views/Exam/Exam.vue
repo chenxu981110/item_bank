@@ -16,7 +16,7 @@
 
 <script>
 import TestList from '../../components/TestQuestions.vue'
-import TestHead from '../Exam/ExamHead.vue'
+import TestHead from '../../components/ExamHead.vue'
 export default {
   components: {
     TestList,

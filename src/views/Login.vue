@@ -32,6 +32,7 @@
             <el-button
               type="primary"
               id="login"
+              class="btnLogin"
             >
               登录
             </el-button>
@@ -47,6 +48,7 @@
           <el-button
             type="warning"
             id="registered"
+            class="btnRegistered"
           >
             注册
           </el-button>
@@ -104,7 +106,6 @@ export default {
     }
   }
      /deep/.el-button{
-      width: 80%;
       height: 45px;
       outline: none;
       border: none;
@@ -134,4 +135,10 @@ export default {
       color: #fff;
       background-color: #366AC9;
     }
+.btnLogin{
+  width: 100%;
+}
+.btnRegistered{
+  width: 80%;
+}
 </style>
