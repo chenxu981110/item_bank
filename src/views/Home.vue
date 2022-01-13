@@ -174,13 +174,12 @@
             alt="压缩包"
           >
         </a>
-
-        <a
+        <router-link
           class="icoBg"
-          href="javascript:;"
+          to="/AddItems"
         >
           <i class="iconfont icon-daochu1024-29 icoAdd" />
-        </a>
+        </router-link>
       </b-row>
     </b-container>
     <span class="fileinput-button ">

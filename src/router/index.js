@@ -8,6 +8,7 @@ import ChangePassword from '../views/ChangePassword.vue'
 import Collections from '../views/Collections.vue'
 import Tags from '../views/Tags.vue'
 import Register from '../views/Register.vue'
+import AddItems from '../views/AddItems.vue'
 
 Vue.use(VueRouter)
 
@@ -51,7 +52,13 @@ const routes = [
     path: '/Tags',
     name: 'Tags',
     component: Tags
+  },
+  {
+    path: '/AddItems',
+    name: 'AddItems',
+    component: AddItems
   }
+
 ]
 
 const router = new VueRouter({

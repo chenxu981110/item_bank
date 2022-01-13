@@ -4,7 +4,7 @@
       <b-row
         class="justify-content-center"
         align-v="center"
-        style="background-color:plum:width:90%;margin:0 auto 30px;position: relative;"
+        style="width:90%;margin:0 auto 30px;position: relative;"
       >
         <router-link
           to="/Profile"

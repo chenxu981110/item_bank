@@ -2,9 +2,35 @@
   <div class="ExamHead">
     <!-- 头部图标 -->
     <div class="headFlex">
-      <div>图标</div>
-      <div>{{ headTxt }}</div>
-      <div>图标</div>
+      <b-row
+        class="justify-content-center"
+        align-v="center"
+        style="width:90%;margin:0 auto 30px;position: relative;"
+      >
+        <router-link
+          to="/Home"
+          style="position: absolute;left:0px"
+        >
+          <div style="width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;background-color: #EFF3F6;">
+            <i
+              class="iconfont icon-zuojiantou"
+              style="font-weight: 600;font-size: 15px;color: #303E65;"
+            />
+          </div>
+        </router-link>
+        <span id="title">{{ headTxt }}</span>
+        <router-link
+          to="#"
+          style="position: absolute;right:0px"
+        >
+          <div style="width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;background-color: #0139BA27;">
+            <i
+              class="iconfont icon-daochu1024-29"
+              style="color:#0139BA;font-size: 35px;"
+            />
+          </div>
+        </router-link>
+      </b-row>
     </div>
 
     <!-- 搜索框 -->
@@ -187,5 +213,10 @@ export default {
 .el-dropdown{
     left: calc(50% - 10px);
     margin-top: 10px;
+}
+#title{
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 </style>
