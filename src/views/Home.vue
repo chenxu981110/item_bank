@@ -39,7 +39,7 @@
           style="padding:0px"
         >
           <router-link
-            to="/Exam"
+            to="/Exam/judge"
             @click.native="toTest('判断题')"
           >
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
@@ -76,7 +76,7 @@
           style="padding:0px"
         >
           <router-link
-            to="/Exam"
+            to="/Exam/other"
             @click.native="toTest('选择题')"
           >
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
@@ -110,7 +110,7 @@
         >
           <router-link
             @click.native="toTest('作答题')"
-            to="/Exam"
+            to="/Exam/other"
           >
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
               <a
