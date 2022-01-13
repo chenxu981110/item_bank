@@ -9,6 +9,7 @@ import Collections from '../views/Collections.vue'
 import Tags from '../views/Tags.vue'
 import Register from '../views/Register.vue'
 import AddItems from '../views/AddItems.vue'
+import QuestionTeacher from '../views/QuestionTeacher.vue'
 
 Vue.use(VueRouter)
 
@@ -57,6 +58,11 @@ const routes = [
     path: '/AddItems',
     name: 'AddItems',
     component: AddItems
+  },
+  {
+    path: '/QuestionTeacher',
+    name: 'QuestionTeacher',
+    component: QuestionTeacher
   }
 
 ]

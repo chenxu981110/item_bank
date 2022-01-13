@@ -186,17 +186,25 @@
       </div>
       <!--已有标签-->
       <b-row>
-        <div
-          v-for="(item,index) in existing_label"
-          :key="index"
-          style="background: #505ED027;color: #505ED0;width:auto;height: 30px;padding: 5px 10px;display: flex;flex-direction: row;align-items: center;border-radius: 5px;margin:5px;"
-        >
-          <input
-            type="checkbox"
-            :id="'checkbox'+ index"
-          >
-          <label for="'checkbox'+ index">{{ existing_label[index] }}</label>
-        </div>
+        <b-col cols="12">
+          <div style="display: flex;flex-direction: row;align-items: center;flex-wrap: wrap;">
+            <div
+              v-for="(item,index) in existing_label"
+              :key="index"
+              style="background: #505ED027;color: #505ED0;width:auto;height: 30px;padding: 5px 10px;display: flex;flex-direction: row;align-items: center;border-radius: 5px;margin:5px;"
+            >
+              <input
+                type="checkbox"
+                :id="'checkbox'+ index"
+                style="width:15px;height:15px;margin-right:5px"
+              >
+              <label
+                :for="'checkbox'+ index"
+                style="margin-bottom:0px"
+              >{{ existing_label[index] }}</label>
+            </div>
+          </div>
+        </b-col>
       </b-row>
       <!--添加标签-->
       <b-row class="edit_input">
@@ -238,6 +246,7 @@
       </b-row>
       <!--提交-->
       <button
+        @click="submit()"
         type="button"
         style="background-color: rgb(56, 146, 223); color: rgb(255, 255, 255); padding: 3px 10px; letter-spacing: 1px; border-radius: 4px; font-size: 14px; margin: 10px 5px 50px; outline: none; border: none; float:right;"
       >
@@ -281,6 +290,11 @@ export default {
     },
     removeTag (index) {
       this.added_label.splice(index, 1)
+    },
+    submit () {
+      this.existing_label = this.existing_label.concat(this.added_label)
+      console.log(this.existing_label)
+      this.added_label.splice(0, this.added_label.length)
     }
   }
 }
