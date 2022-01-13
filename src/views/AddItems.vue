@@ -277,7 +277,8 @@ export default {
   },
 
   mounted () {
-
+    this.selected = this.$route.params.headTxt
+    console.log('this.selected', this.selected)
   },
 
   methods: {

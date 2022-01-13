@@ -20,7 +20,8 @@
         </router-link>
         <span id="title">{{ headTxt }}</span>
         <router-link
-          to="#"
+          :to="{name: 'AddItems', params: { headTxt: headTxt } }"
+
           style="position: absolute;right:0px"
         >
           <div style="width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;background-color: #0139BA27;">
@@ -171,11 +172,15 @@ export default {
   methods: {
 
   },
-  watch: {
-    '$store.state.titType' () {
-      this.headTxt = this.$store.state.titType
-    }
+  mounted () {
+    this.headTxt = this.$route.params.pageTitle
+    console.log('this.selected', this.selected)
   }
+  // watch: {
+  //   '$store.state.titType' () {
+  //     this.headTxt = this.$store.state.titType
+  //   }
+  // }
 }
 </script>
 

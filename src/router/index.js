@@ -25,7 +25,7 @@ const routes = [
     component: Register
   },
   {
-    path: '/Exam/:id',
+    path: '/Exam/:pageTitle',
     name: 'Exam',
     component: Exam
   },
@@ -55,7 +55,7 @@ const routes = [
     component: Tags
   },
   {
-    path: '/AddItems',
+    path: '/AddItems/:headTxt',
     name: 'AddItems',
     component: AddItems
   },

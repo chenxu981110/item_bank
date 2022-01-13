@@ -38,10 +38,8 @@
           md="4"
           style="padding:0px"
         >
-          <router-link
-            to="/Exam/judge"
-            @click.native="toTest('判断题')"
-          >
+          <!-- @click.native="toTest('判断题')" -->
+          <router-link :to="{ name: 'Exam', params: { pageTitle: pageTitle[0] } }">
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
               <a
                 href="javascript:;"
@@ -197,6 +195,7 @@ export default {
   name: 'Home',
   data () {
     return {
+      pageTitle: ['判断题', '选择题', '作答题'],
       judge_number: '3',
       choose_number: '5',
       free_response: '260',
