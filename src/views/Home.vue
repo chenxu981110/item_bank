@@ -73,10 +73,11 @@
           md="4"
           style="padding:0px"
         >
-          <router-link
+          <!-- <router-link
             to="/Exam/other"
             @click.native="toTest('选择题')"
-          >
+          > -->
+          <router-link :to="{ name: 'Exam', params: { pageTitle: pageTitle[1] } }">
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
               <a
                 href="javascript:;"
@@ -106,10 +107,11 @@
           md="4"
           style="padding:0px"
         >
-          <router-link
+          <!-- <router-link
             @click.native="toTest('作答题')"
             to="/Exam/other"
-          >
+          > -->
+          <router-link :to="{ name: 'Exam', params: { pageTitle: pageTitle[2] } }">
             <div style="height: 180px;display: flex;justify-content: center;align-items: center;">
               <a
                 href="javascript:;"

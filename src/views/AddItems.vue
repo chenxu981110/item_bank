@@ -8,7 +8,7 @@
         style="width:90%;margin:0 auto 30px;position: relative;"
       >
         <router-link
-          to="/Home"
+          :to="{ name: 'Exam', params: { pageTitle: title } }"
           style="position: absolute;left:0px"
         >
           <div style="width: 40px;height: 40px;border-radius: 10px;text-align: center;line-height: 40px;background-color: #EFF3F6;">
@@ -272,13 +272,19 @@ export default {
       selected: '作答题',
       existing_label: [],
       tagContent: '',
-      added_label: []
+      added_label: [],
+      title: ''
     }
   },
 
   mounted () {
-    this.selected = this.$route.params.headTxt
-    console.log('this.selected', this.selected)
+    if (this.$route.params.headTxt === '选择题') {
+      this.selected = '单选'
+    } else {
+      this.selected = this.$route.params.headTxt
+      console.log('this.selected', this.selected)
+    }
+    this.title = this.$route.params.headTxt
   },
 
   methods: {

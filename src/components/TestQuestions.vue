@@ -1,114 +1,195 @@
 <template>
-  <div>
-    <div class="testList">
-      <div class="testTop">
-        <div class="testId">
-          {{ 1 }}.
-        </div>
+  <b-container>
+    <b-row
+      v-for="(item,index) in questionsList"
+      :key="index"
+      class="questions"
+    >
+      <b-col cols="12">
         <div>
-          <div class="title">
-            题目
+          <span>{{ index + 1 }}.</span>
+          <span class="questionContent">{{ item.questionContent }}</span>
+        </div>
+        <!--判断题-->
+        <div
+          v-show="isShow"
+          style="display: flex;flex-direction: column;align-items: flex-start;"
+        >
+          <div>
+            <input
+              type="radio"
+              id="right"
+              disabled
+              checked
+            >
+            <label for="right">对</label>
           </div>
           <div>
-            <!-- 判断题 -->
-            <div
-              class="judge"
-              v-if="testType"
+            <input
+              type="radio"
+              id="wrong"
+              disabled
             >
-              <el-form
-                ref="form"
-                :model="form"
-              >
-                <el-form-item label="">
-                  <el-radio-group
-                    v-model="form.resource"
-                    class="judgeFlex"
-                  >
-                    <el-radio label="对" />
-                    <el-radio label="错" />
-                  </el-radio-group>
-                </el-form-item>
-              </el-form>
-            </div>
-            <!-- 选择题/简答题 -->
-            <div
-              class="other"
-              v-if="!testType"
-            >
-              选项/简答
-            </div>
+            <label for="wrong">错</label>
           </div>
         </div>
+        <!--选择题-->
+        <div>
+          <p
+            v-for="(option,optionIndex) in options"
+            :key="optionIndex"
+          >
+            {{ option.optionContent }}
+          </p>
+        </div>
+      </b-col>
+      <!--属性-->
+      <b-col
+        cols="12"
+        class="property"
+      >
+        <b-row>
+          <b-col
+            cols="12"
+            xl="2"
+          >
+            <span>难度：{{ item.difficulty }}</span>
+          </b-col>
+          <b-col
+            cols="12"
+            xl="2"
+          >
+            <span>题目编号：{{ item.number }}</span>
+          </b-col>
+          <b-col
+            cols="12"
+            xl="2"
+          >
+            <span>预习/作业：{{ item.type }}</span>
+          </b-col>
+          <b-col
+            cols="12"
+            xl="2"
+          >
+            <span>题目归属章节：{{ item.chapter }}</span>
+          </b-col>
+          <b-col
+            cols="12"
+            xl="2"
+          >
+            <span>题目来源：{{ item.source }}</span>
+          </b-col>
+        </b-row>
+      </b-col>
+      <!--tags-->
+      <div
+        class="tags"
+      >
+        <span
+          v-for="(tag,number) in tags"
+          :key="number"
+          class="tag"
+        >{{ tag.tagName }}</span>
       </div>
-      <div class="testBottom">
-        <div>难度:{{ 0 }}</div>
-        <div>题目编号:{{ 0 }}</div>
-        <div>预习/作业:{{ 0 }}</div>
-        <div>题目归属章节:{{ 0 }}</div>
-        <div>题目来源:{{ 0 }}</div>
-      </div>
-    </div>
-  </div>
+    </b-row>
+  </b-container>
 </template>
-
 <script>
 export default {
-  props: {
-    testType: {
-      type: Boolean,
-      default: null
-    }
-  },
+  name: 'Profile',
+
   data () {
     return {
-      form: {
-        resource: ''
+      isShow: false,
+      questionsList: [
+        {
+          questionContent: '',
+          difficulty: '0.1',
+          number: '001',
+          type: '预习',
+          chapter: '第2章',
+          source: '系统中添加'
+        }
+      ],
+      tags: [
+        {
+          tagName: '物理'
+        }
+      ],
+      options: [
+        {
+          optionContent: 'A.XXX'
+        }, {
+          optionContent: 'B.XXX'
+        },
+        {
+          optionContent: 'C.XXX'
+        }, {
+          optionContent: 'D.XXX'
+        }
+      ]
+    }
+  },
+  mounted () {
+
+  },
+  created () {
+    this.a()
+  },
+  methods: {
+    a () {
+      if (this.$route.params.pageTitle === '判断题') {
+        this.questionsList.questionContent = '判断题'
+        console.log(this.questionsList.questionContent)
+        this.isShow = true
+      } else if (this.$route.params.pageTitle === '选择题') {
+        this.questionsList.questionContent = '选择题'
+        this.isShow = false
+      } else if (this.$route.params.pageTitle === '作答题') {
+        this.questionsList.questionContent = '作答题'
+        this.isShow = false
       }
     }
   }
 }
 </script>
-
 <style lang="less" scoped>
-.testList{
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #acacac8f;
-  border-radius: 10px;
-  margin: 0 auto;
-  margin-top: 15px;
+label{
+  margin-bottom: 0px;
+}
+.property{
+    background-color: #F4F4F4;
+    padding: 5px 15px;
+    color: #151515;
+    font-size: 13px;
+    border-bottom: 1px dashed #DADADA;
+    border-top: 1px solid #DADADA;
+    margin: 0px;
+}
+.questions{
+    margin: 15px auto;
+    border: 1px solid #acacac8f;
+    border-radius: 10px;
+}
+.tag{
   font-size: 14px;
+  font-weight:500;
+  padding:2px 10px;
+  border-radius: 3px;
+  margin:  5px;
+  color: #308FF6;
+  border: 1px solid #308FF6;
+  width: fit-content;
 }
-.testTop{
+.tags{
+  padding: 10px 15px;
   display: flex;
-  padding: 15px;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
-.testId{
-  width: 20px;
-}
-.testBottom{
-  background-color: #F4F4F4;
-  padding: 5px 15px;
-  color: #151515;
-  font-size: 13px;
-  border-bottom: 1px dashed #DADADA;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-evenly;
-}
-.judgeFlex{
-  display: flex;
-  flex-direction: column;
-}
-.title{
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width : 650px) {
-  .testBottom{
-    display: flex;
-    flex-direction: column;
-  }
+p{
+  margin-bottom: 0px;
 }
 </style>

@@ -1,16 +1,7 @@
 <template>
   <div class="Exam">
     <TestHead />
-    <div class="test">
-      <TestList
-        v-if="id === 'judge'"
-        :test-type="judge"
-      />
-      <TestList
-        v-if="id === 'other'"
-        :test-type="other"
-      />
-    </div>
+    <TestList />
   </div>
 </template>
 
@@ -33,15 +24,12 @@ export default {
 
   },
   mounted () {
-    this.id = this.$route.params.id
+
   }
 
 }
 </script>
 
 <style lang="less" scoped>
-.test{
-  padding-left: 30px;
-  margin-top: 50px;
-}
+
 </style>
